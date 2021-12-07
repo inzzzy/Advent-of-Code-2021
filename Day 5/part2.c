@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX(x, y) (((x) > (y)) ? (x) : (y))
 #define SAMPLE_FILE "sample.txt"
 #define INPUT_FILE "input.txt"
 #define BOARD_SIZE 1000
@@ -32,7 +31,7 @@ void drawLine(int x1, int y1, int x2, int y2) {
     int dx, dy;
 
     // Total distance that needs to be moved
-    n = MAX(abs(x2-x1), abs(y2-y1));
+    n = (x2-x1 == 0) ? abs(y2-y1) : abs(x2-x1);
 
     // Determine whether the point on the respective axis needs to move forward, backwards , or stay static (horiz./vert. line)
     dx = sign(x2-x1);
