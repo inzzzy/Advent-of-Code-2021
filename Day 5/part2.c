@@ -30,12 +30,12 @@ void drawLine(int x1, int y1, int x2, int y2) {
     int x, y, n;
     int dx, dy;
 
-    // Total distance that needs to be moved
-    n = (x2-x1 == 0) ? abs(y2-y1) : abs(x2-x1);
-
     // Determine whether the point on the respective axis needs to move forward, backwards , or stay static (horiz./vert. line)
     dx = sign(x2-x1);
     dy = sign(y2-y1);
+
+    // Total distance that needs to be moved
+    n = (dx == 0) ? abs(y2-y1) : abs(x2-x1);
 
     for(int i = 0; i < n+1; i++){
         x = x1 + dx*i;
