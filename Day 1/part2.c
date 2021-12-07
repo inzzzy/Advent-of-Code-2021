@@ -20,7 +20,6 @@ int main() {
     // x = next value 
     int x;
     int ans = 0;
-    printf("Start Sum: %d\n", sum);
     while (fscanf(fp, "%d", &x) == 1){
         // New sum = previous sum - first + next
         int val = sum-a+x;
