@@ -13,22 +13,17 @@ int main() {
 
     // Scan first 3 values, sum and remember them.
     int a,b,c;
-    int sum;
     fscanf(fp, "%d\n%d\n%d", &a, &b, &c);
-    sum = a+b+c;
 
     // x = next value 
     int x;
     int ans = 0;
     while (fscanf(fp, "%d", &x) == 1){
         // New sum = previous sum - first + next
-        int val = sum-a+x;
-        if (val > sum) ans++;
-        // Swap values and refresh sum
+        if (b+c+x > a+b+c) ans++;
         a = b;
         b = c;
         c = x;
-        sum = a+b+c;
     }
 
     printf("Increments: %d\n", ans);
