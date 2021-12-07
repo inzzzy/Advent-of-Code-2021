@@ -18,8 +18,8 @@ int main() {
     sum = a+b+c;
 
     // x = next value 
-    int ans = 0;
     int x;
+    int ans = 0;
     printf("Start Sum: %d\n", sum);
     while (fscanf(fp, "%d", &x) == 1){
         // New sum = previous sum - first + next
