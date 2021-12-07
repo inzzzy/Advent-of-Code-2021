@@ -17,12 +17,12 @@ int main() {
     fscanf(fp, "%d\n%d\n%d", &a, &b, &c);
     sum = a+b+c;
 
-    // x = Next Value
+    // x = next value 
     int ans = 0;
     int x;
     printf("Start Sum: %d\n", sum);
     while (fscanf(fp, "%d", &x) == 1){
-        // New Value = sum - first + next
+        // New sum = previous sum - first + next
         int val = sum-a+x;
         if (val > sum) ans++;
         // Swap values and refresh sum
