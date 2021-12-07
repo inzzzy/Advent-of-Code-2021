@@ -3,7 +3,6 @@
 #define SAMPLE_FILE "sample.txt"
 #define INPUT_FILE "input.txt"
 #define BOARD_SIZE 1000
-
 int board[BOARD_SIZE][BOARD_SIZE] = {0};
 
 
